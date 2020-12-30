@@ -1,0 +1,306 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.color-nav{
+  background-color: #8d0a4b;
+  color: black;
+}
+
+/* Navbar CSS */ 
+.search{
+  width: 5%;
+  min-width: 270px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 2px 4px 1px rgba(0, 0, 0, .18);
+  text-align: left;
+  z-index: 8000;
+  background-color: white;
+}
+.search-ul{
+  list-style-type: none;
+  text-align: left;
+  z-index: 8000; 
+  padding: 10px 10px;
+  margin: auto;
+}
+.search-input{
+  border: 3px solid black;
+  width: 100%;
+  max-width: 400px;  
+  position: relative;
+  padding: 10px 10px;
+  z-index: 8000;
+
+}
+
+.li-selections{
+  text-align: center;
+  z-index: 8000; 
+  padding-right: 15px;
+  margin: auto;
+}
+.li-selections:hover{
+  text-decoration: underline;
+  background-color: lightgrey;
+}
+
+
+.news-header{
+  margin: auto;
+  background-color: white;
+  font-size: 2.75em;
+  text-align: center;
+  
+}
+.topNews{
+  cursor: pointer;
+  width: 100%; 
+  max-width: 1000px; 
+  padding: 15px;
+  height: fit-content;
+}
+
+
+/* Live Game CSS */
+.header-live{
+  padding-Left: 15px;
+  animation: blinker 1.33s ease-in-out infinite;
+  color: #ff2882;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.container-livegame{
+  max-height: 150px;
+  width: 30%;
+  min-width: 400px;
+  max-width: 400px;
+  border: 3px solid black;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.game-timer{
+  color: #ff2882;
+  font-weight: bold;
+  width: 35%;
+  max-width: 150px; 
+  max-height: 10px; 
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
+}
+.team-score{
+  background-color: purple;
+  display: inline-block;
+  padding: 10px 10px;
+  color: white;
+  font-size: 32px;
+  border-radius: 5px;
+
+}
+
+
+/* Fixtures Page CSS */
+.game-time{
+  border: 1px solid black;
+  font-size: 2em;
+  margin: auto;
+  border-radius: 5px;
+
+}
+.fixtures-container{
+  display: flex;
+  width: 50%;
+  border-radius: 5px;
+
+}
+.fixtures-name{
+  margin: auto;
+  width: 50%;
+  font-size: 1.5em;
+}
+
+/* Results Page CSS */
+.result-header{
+  margin: auto; 
+  padding: 0px 0px; 
+  width: 35%; 
+  text-align: center;
+}
+.result-container{
+  background-color:white;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto; 
+  display: flex;
+  border-radius: 5px;
+
+}
+.result-container:hover{
+  background:  rgb(128,0,255);
+  background: linear-gradient(90deg, rgba(128,0,255,1) 25%, rgba(255,0,202,1) 75%);
+}
+.team-container{
+  display: flex;
+  border: 3px solid black;
+  width: 50%;
+  border-radius: 5px;
+}
+.team-name{
+  margin: auto;
+  width: 50%;
+  font-size: 1.5em;
+}
+.result-score{
+  margin: auto;
+  font-size: 2em;
+  background-color: purple;
+  padding: 10px 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+
+
+
+
+/* Standings Page CSS */
+.content-table {
+  border-collapse: collapse; 
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  width: 50%;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.content-table thead tr {
+  background-color: #8512f0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+.content-table th, .content-table td {
+  padding: 12px 25px;
+  font-family: 'Merriweather';
+  text-align: center;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  height: 100px;
+  font-weight: bold;
+  color: black;
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:hover{
+  background: rgb(128,0,255);
+  background: linear-gradient(90deg, rgba(128,0,255,1) 25%, rgba(255,0,202,1) 75%);
+  font-size: "24px";
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 3px solid #8512f0;
+}
+
+
+
+
+
+@media screen and (max-width: 1225px) and (min-width: 1045px) {
+  .th-col-7, .th-col-8, .th-col-11, .col-7, .col-8, .col-11{
+    display:none;
+  }
+  .match-date{
+    display: none;
+  }
+  .news-header{
+    text-align: left;
+  }
+  
+}
+
+@media screen and (max-width: 1045px) and (min-width: 835px) {
+  .th-col-7, .th-col-8, .th-col-11, .col-7, .col-8, .col-11{
+    display:none;
+  }
+  .match-date{
+    display: none;
+  }
+  .team-name{
+    display: none;
+  }
+  .news-header{
+    text-align: left;
+  }
+  
+}
+
+@media screen and (max-width: 565px) and (min-width: 300px) {
+  .body{
+    width:100%;
+  }
+  .th-col-7, .th-col-8, .th-col-11, .col-7, .col-8, .col-11{
+    display:none;
+  }
+  .match-date{
+    display: none;
+  }
+  .team-name{
+    display: none;
+  }
+  .fixtures-name{
+    display: none;
+  }
+  .fixtures-container{
+    padding: 10px 50px;
+  }
+  .game-time{
+    padding: 0px 0px;
+  }
+  .news-header{
+    text-align: left;
+  }
+  .topNews{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .th-col-7, .th-col-8, .th-col-11, .col-7, .col-8, .col-11{
+    display:none;
+  }
+  .match-date{
+    display: none;
+  }
+  .team-name{
+    display: none;
+  }
+  .news-header{
+    text-align: left;
+  }
+  
+}
+
+
