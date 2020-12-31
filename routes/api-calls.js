@@ -1,18 +1,28 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const nodeFetch = require('node-fetch');
 require('dotenv').config();
 
 var results;
 
 // Get Standings
 router.get('/standings', async (req, res) => {
+    // nodeFetch("https://api.football-data.org/v2/competitions/PL/standings?standingType=TOTAL", 
+    //     { headers: {
+    //         "X-Auth-Token": process.env.FOOTBALL_DATA_APIKEY
+    //     }, method: 'GET'})
+    //     .then((response) => {
+    //         console.log(response)
+    //         results = response.data.standings[0].table
+    //         res.json(results)
+    //     })
+    //     .catch(err => res.status(404).send("Failed request " + err))
     await axios.get("https://api.football-data.org/v2/competitions/PL/standings?standingType=TOTAL", 
         {headers: {
             "X-Auth-Token": process.env.FOOTBALL_DATA_APIKEY
-            }
-        }
-    )
+        }})
+
         .then((response) => {
             results = response.data.standings[0].table
             res.json(results)
