@@ -3,8 +3,8 @@ import $ from 'jquery';
 import moment from 'moment';
 
 export default class ResultsPage extends Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             footballMatches: [],
             results: [],

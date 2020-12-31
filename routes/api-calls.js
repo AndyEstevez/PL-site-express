@@ -48,7 +48,7 @@ router.get('/matches', async (req, res) => {
 
 // Get News 
 router.get('/news', async (req, res) => {
-    axios.get(process.env.SEARCH_QUERY_URL)
+    await axios.get(process.env.SEARCH_QUERY_URL)
         .then(response => {
             results = response.data.articles
             res.json(results)
