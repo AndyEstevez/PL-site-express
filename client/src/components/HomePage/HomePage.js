@@ -13,7 +13,6 @@ import NewsSection from './NewsSection';
 // Wolverhampton Wanderers FC = Wolves
 
 
-
 export default class HomePage extends Component {
     constructor(props){
         super(props);
@@ -27,23 +26,14 @@ export default class HomePage extends Component {
 
     async componentDidMount(){
         // console.log(process.env.REACT_APP_SEARCHQUERY_URL)
-        try {
-            const response = await fetch(process.env.REACT_APP_SEARCH_QUERY_URL);
-            const json = await response.json();
-            this.setState({ topNews: json.articles[0], news: json.articles.slice(1, 4)});
-          } catch (error) {
-            console.log(error);
-        }
-       
-        $.ajax({
-            headers: { 'X-Auth-Token': process.env.REACT_APP_FOOTBALL_DATA_APIKEY },
-            url: "https://api.football-data.org/v2/competitions/PL/matches",
-            dataType: 'json',
-            type: 'GET',
-            success: (res) => {
-                this.setState({footballMatches: res.matches})
-            }
-          })
+  
+        fetch('/news')
+            .then(res => res.json())
+            .then(articles => this.setState({topNews: articles[0], news: articles.slice(1, 4)}))
+        
+        fetch('/matches')
+            .then(res => res.json())
+            .then(matches => this.setState({footballMatches: matches}))
     }
 
     render() {

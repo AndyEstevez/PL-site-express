@@ -24,7 +24,7 @@ export default class StandingsPage extends Component {
     componentDidMount(){
         fetch('/standings')
             .then(res => res.json())
-            .then(standings => this.setState({standings}, () => console.log("data fetched ...", standings)))
+            .then(standings => this.setState({standings}))
     }
 
 
