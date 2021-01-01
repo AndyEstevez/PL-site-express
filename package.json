@@ -6,6 +6,7 @@
   "scripts": {
     "client-install": "cd react-ui && npm install",
     "start": "node server.js",
+    "build": "cd react-ui/ && npm install && npm run build",
     "server": "nodemon server.js",
     "client": "npm start --prefix react-ui",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
