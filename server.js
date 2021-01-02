@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname, 'react-ui/build')));
 
 
 // API routes
-app.use('/api', require('./routes/api-calls'));
+app.use('/', require('./routes/api-calls'));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/react-ui/build/index.html'));
   });
 const port = 5000;
 
-app.listen(process.env.PORT || port, () => console.log(`Server started on ${port}`));
+app.listen(5000, () => console.log(`Server started on ${port}`));

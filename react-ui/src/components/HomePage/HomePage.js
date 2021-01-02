@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery'; 
 import LiveGames from './LiveGames'
 import Matchweek from './Matchweek';
 import TopNews from './TopNews';

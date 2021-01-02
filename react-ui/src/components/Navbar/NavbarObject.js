@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, } from 'react-bootstrap';
-import $ from 'jquery';
 import SearchIcon from '@material-ui/icons/Search';
 
 export default class NavbarObject extends Component {
